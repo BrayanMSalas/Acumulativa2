@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Ejercicio Formativo</title>
+        <style>
+            form div {
+                margin: 10px;
+            }
+
+            fieldset {
+                min-width: 150px;
+                display: inline-block;
+            }
+
+            fieldset input{
+                float: right;
+                margin-left: 3em;
+                
+            }
+
+            .container {
+                max-width: 600px;
+                background-color:burlywood;
+                padding: 2em;
+                margin: auto;
+            }
+            .circulo {
+                height: 1em;
+                width: 1em;
+                background-color: white;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 1em;
+            }
+
+            .rojo {background-color: red;}
+            .verde {background-color: green;}
+
+            ul {list-style-type: none; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <form method="POST" name="frm" action="#">
+            <fieldset>
+            <div><label>Nombre</label><input type="text" name="nombre"></div>
+            <div><label>Numero 1</label><input type="text" name="numero1"></div>
+            <div><label>Numero 2</label><input type="text" name="numero2"></div>
+            <div><label>Password</label><input type="password" name="password1"></div>
+            <div><label>Repetir Password</label><input type="password" name="password2"></div>
+            <div><label>Destino</label><input type="text" name="destino"></div>
+            <div>Seleccione al menos 3 opciones:
+                <br><input type="checkbox" name="opcion_1" value="A">Opcion 1
+                <br><input type="checkbox" name="opcion_2" value="B">Opcion 2
+                <br><input type="checkbox" name="opcion_3" value="C">Opcion 3
+                <br><input type="checkbox" name="opcion_4" value="D">Opcion 4
+                <br><input type="checkbox" name="opcion_5" value="E">Opcion 5
+                <br><input type="checkbox" name="opcion_6" value="F">Opcion 6
+            </div>
+            <div><button name="btnEnviar">ENVIAR</div>
+            </fieldset>
+        </form>
+
+        <h1>Ejercicio Formativo</h1>
+        <p>Utilice Javascript para realizar las siguientes validaciones. En caso de que no pase la validación debe marcar el circulo de rojo (agregar clase rojo) 
+            en caso de que pase la validacion debe marcar el circulo de verde (agregar clase verde).</p>
+            <p>Una vez que pase todas las validaciones se debe enviar el formulario a la direccion ingresada en el mismo (destino).</p>
+            <p> </p>
+        <ul>
+            <li><div id="ok01" class="circulo"></div>El nombre no puede estar vacío</li>
+            <li><div id="ok02" class="circulo"></div>El destino no puede estar vacío</li>
+            <li><div id="ok03" class="circulo"></div>Si se ingresa uno de los numeros, se debe ingresar el segundo, no puede haber solo uno.</li>
+            <li><div id="ok04" class="circulo"></div>El numero 1 debe ser menor que el numero 2 (si se ingresaron ambos)</li>
+            <li><div id="ok05" class="circulo"></div>La contraseña debe ser de entre 8 y 24 caracteres.</li>
+            <li><div id="ok05" class="circulo"></div>Ambas contraseñas coinciden.</li>
+            <li><div id="ok06" class="circulo"></div>Hay al menos 3 opciones seleccionadas.</li>
+        </ul>
+
+    </div>
+    <script src="js/main.js"></script>
+    </body>
+</html>
