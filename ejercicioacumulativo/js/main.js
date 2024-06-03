@@ -33,6 +33,7 @@ function DestinyValidation(element) {
 
 function NumbersValidation(number1, number2) {
     const ok03 = document.getElementById('ok03');
+    const ok04 = document.getElementById('ok04');
     const num1 = form[number1];
     const num2 = form[number2];
 
@@ -42,6 +43,12 @@ function NumbersValidation(number1, number2) {
     if (elementValue1.trim() === '' || elementValue2.trim() === '') {
         ok03.classList.add('rojo');
         ok03.classList.remove('verde');
+        ok04.classList.add('rojo');
+        ok04.classList.remove('verde');
+
+    } else if (elementValue1 < elementValue2) {
+        ok04.classList.add('verde');
+        ok04.classList.remove('rojo');
 
     } else {
         ok03.classList.add('verde');
