@@ -53,6 +53,8 @@ function NumbersValidation(number1, number2) {
     } else {
         ok03.classList.add('verde');
         ok03.classList.remove('rojo');
+        ok04.classList.add('rojo');
+        ok04.classList.remove('verde');
         return elementValue1, elementValue2;
     };
 };
