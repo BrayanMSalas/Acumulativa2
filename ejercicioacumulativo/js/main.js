@@ -68,3 +68,39 @@ form.addEventListener('submit', function(formEvent) {
     const numbers = NumbersValidation('numero1', 'numero2');
 
 });
+
+
+const opciones = document.forms['frm'];
+opciones.addEventListener('submit', function(){
+    const ok06 = document.getElementById('ok06');
+
+    const A = document.querySelector('[name="opcion_1"]');
+    const B = document.querySelector('[name="opcion_2"]');
+    const C = document.querySelector('[name="opcion_3"]');
+    const D = document.querySelector('[name="opcion_4"]');
+    const E = document.querySelector('[name="opcion_5"]');
+    const F = document.querySelector('[name="opcion_6"]');
+
+    const checkboxes = [A, B, C, D, E, F];
+    const checkboxes2 = []
+    let contador = 0
+
+    for (const checkbox of checkboxes) {
+        if (checkbox.checked) {
+            checkboxes2.push(checkbox.value);
+            contador++;
+        }
+    }
+    console.log(contador);
+    console.log(checkboxes2.toString());
+
+    if(contador>=3){
+        ok06.classList.add('verde');
+        ok06.classList.remove('rojo');
+
+    }
+    else{
+        ok06.classList.add('rojo');
+        ok06.classList.remove('verde');
+    }
+});
